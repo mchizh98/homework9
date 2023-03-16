@@ -27,35 +27,41 @@ public class Main {
 
     public static void task2 () {
         System.out.println("Задача2");
+        /*
+        int[] weights = {90, 91, 93, 92, 85, 87, 88, 89, 0, 0, 0, 0};
+int maxWeight = -1;
+for (final int current : weights) {
+// Переменная final int current объявляется внутри скобок for
+// Ей присваивается значение каждого элемента массива weights
+    if (current > maxWeight) {
+        maxWeight = current;
+    }
+}
+System.out.println(maxWeight);
+
+         */
         int[] arr = generateRandomArray();
-        arr = generateRandomArray();
         int maxArr = -1;
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] > maxArr) {
-                maxArr = arr[i];
+        int minArr = arr [0];
+        for (final int day : arr) {
+            if (day > maxArr) {
+                maxArr = day;
+            }
+            if (day < minArr) {
+                minArr = day;
             }
         }
         System.out.println(maxArr);
-
-        int minArr = arr [0];
-        for (int i : arr) {
-            if ( i < minArr) {
-                minArr = i;
-            }
-        }
         System.out.println(minArr);
     }
     public static void task3 () {
         System.out.println("Задача3");
-        int[] arr = generateRandomArray();
-        int sum = 0;
-        int average = 0;
+        int [] arr = generateRandomArray();
+        double sum = 0;
         for (int element : arr) {
             sum += element;
-            average = sum / 30;{
-                if (average % 1 != 0 && average % 1 == 0);
-            }
         }
+        double average = sum / arr.length;
         System.out.println("Средняя сумма трат за месяц составила " + average + " рублей.");
     }
 
